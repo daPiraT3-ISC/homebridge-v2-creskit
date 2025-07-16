@@ -1,4 +1,4 @@
-// Note remove comments or json file does not load.
+ro// Note remove comments or json file does not load.
 
 {
     "bridge": {
@@ -38,24 +38,27 @@
         {
           "id":1,
           "type":"Dimmer",
-          "name":"Dimmer Switch"
+          "name":"Bedroom Sconce"
         },
         {
           "id":1,
           "type":"Scene",
-          "name":"Good Night Scene"
+          "name":"Good Night"
+        },
+        {
+          "id":2,
+          "type":"Scene",
+          "name":"Away"
         },
         {
           "id":1,
           "type":"GarageDoorOpener",
           "name":"Main Garage"
-
         },
         {
           "id":2,
           "type":"GarageDoorOpener",
           "name":"Side Garage"
-
         },
         {
           "id":1,
