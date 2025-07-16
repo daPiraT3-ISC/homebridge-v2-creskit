@@ -6,9 +6,9 @@ CresKit (together with Homebridge) turns Creston controlled devices into HomeKit
 
 As of CresKit 2.0.1 the following HomeKit accessories are supported:
 
-- Lights (dimming available)
-- Switches
-- Scenese
+- Lights
+- Dimmers
+- Scenes
 - Garage Doors
 - Alarm
 - Thermostat
