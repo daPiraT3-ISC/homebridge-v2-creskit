@@ -1,7 +1,3 @@
-/*
-https://github.com/nfarina/homebridge-legacy-plugins/blob/master/platforms/HomeSeer.js used for reference.
-*/
-
 'use strict';
 
 var async = require('async');
