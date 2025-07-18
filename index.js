@@ -27,7 +27,7 @@ function fromEventCheck(what) {
         eventCheckData.splice(found, 1);
         found = eventCheckData.indexOf(what);
     }
-    if (originalFound==-1) { // No match
+    if (originalFound == -1) { // No match
         return false;
     } else {
         return true;
@@ -71,17 +71,17 @@ CresKit.prototype = {
         this.log("Starting CresKit Config");
 
         cresKitSocket.connect(this.config["port"], this.config["host"], function() {
-            this.log('Connected to Crestron Machine');
+            this.log('Connected to Crestron Processor');
             // ERROR CONNECITON
         }.bind(this));
 
         cresKitSocket.on('close', function() {
-            this.log('Connection closed');
+            this.log('Connection Closed');
             // Handle error properly
             // Reconnect
             try {
                 cresKitSocket.connect(this.config["port"], this.config["host"], function() {
-                    this.log('Re-Connected to Crestron Machine');
+                    this.log('Re-Connected to Crestron Processor');
                 }.bind(this));
             } catch (err) {
                 this.log(err);
@@ -90,7 +90,7 @@ CresKit.prototype = {
 
         }.bind(this));
 
-        // All Crestron replies goes via this connection
+        // All Crestron replies go via this connection
         cresKitSocket.on('data', function(data) {
             this.log("Raw Crestron Data : " + data);
 
@@ -150,7 +150,7 @@ CresKitAccessory.prototype = {
         callback();
     },
     //---------------
-    // PowerState - Lightbulb, Switch, SingleSpeedFan (Scenes)
+    // PowerState - Lightbulb, Switch, SingleSpeedFan, Dimmers, Scenes
     //---------------
     getPowerState: function(callback) { // this.config.type = Lightbulb, Switch, etc
         cresKitSocket.write(this.config.type + ":" + this.id + ":getPowerState:*"); // (:* required) on get
