@@ -11,12 +11,13 @@
     "url": "git+https://github.com/daPiraT3-ISC/homebridge-v2-creskit.git"
   },
   "keywords": [
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "homebridge-crestron"
   ],
   "author": "Alan da Silva",
   "license": "MIT",
   "engines": {
-    "node": ">=0.18.0",
+    "node": "^18.20.4 || ^20.15.1 || ^22",
     "homebridge": ">=0.2.0"
   },
   "bugs": {
@@ -28,3 +29,11 @@
     "async": "^2.0.1"
   }
 }
+
+    {
+      "engines": {
+        "homebridge": "^1.6.0 || ^2.0.0-beta.0",
+        "node": "^18.20.4 || ^20.15.1 || ^22"
+      }
+    }
+
