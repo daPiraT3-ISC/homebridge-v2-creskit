@@ -404,6 +404,23 @@ CresKitAccessory.prototype = {
                 break;
             }
 
+            case "Dimmer": {
+                var dimmerService = new Service.Dimmer();
+                var PowerState = dimmerService
+                    .getCharacteristic(Characteristic.On)
+                    .on('set', this.setPowerState.bind(this))
+                    .on('get', this.getPowerState.bind(this));
+
+                // Register a listener
+                eventEmitter.on(this.config.type + ":" + this.id + ":eventPowerState", function(value) {
+                    eventCheckData.push(this.config.type + ":" + this.id + ":eventPowerState:" + value);
+                    PowerState.setValue(value);
+                }.bind(this));
+
+                services.push( dimmerService );
+                break;
+            }
+
             case "Switch": {
                 var switchService = new Service.Switch();
                 var PowerState = switchService
@@ -418,6 +435,23 @@ CresKitAccessory.prototype = {
                 }.bind(this));
 
                 services.push( switchService );
+                break;
+            }
+
+            case "Scene": {
+                var sceneService = new Service.Scene();
+                var PowerState = sceneService
+                    .getCharacteristic(Characteristic.On)
+                    .on('set', this.setPowerState.bind(this))
+                    .on('get', this.getPowerState.bind(this));
+
+                // Register a listener for event changes
+                eventEmitter.on(this.config.type + ":" + this.id + ":eventPowerState", function(value) {
+                    eventCheckData.push(this.config.type + ":" + this.id + ":eventPowerState:" + value);
+                    PowerState.setValue(value);
+                }.bind(this));
+
+                services.push( sceneService );
                 break;
             }
 
