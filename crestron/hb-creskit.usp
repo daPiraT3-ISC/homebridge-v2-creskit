@@ -24,6 +24,7 @@ INTEGER_PARAMETER Port;
 
 DIGITAL_INPUT 	_SKIP_, _SKIP_;
 DIGITAL_INPUT Lights_Status[60]; // Feedback for Lights
+DIGITAL_INPUT Dimmer_Status[10]; // Feedback for Dimmers
 DIGITAL_INPUT Switch_Status[40]; // Feedback for Switch/Scenes
 DIGITAL_INPUT GarageDoor_Status[4]; // Feedback for Garage Doors. High = Closed, Low = Open (Use NOT symbol to inverse if needed)
 DIGITAL_INPUT Alarm_Stay[1], Alarm_Away[1], Alarm_Night[1], Alarm_Disarmed[1], Alarm_Triggered[1]; // Interlock before sending to modue. High = Active
