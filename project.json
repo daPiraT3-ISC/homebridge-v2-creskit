@@ -1,0 +1,30 @@
+{
+  "name": "homebridge-v2-creskit",
+  "version": "2.0.1",
+  "description": "A homebridge plugin for Crestron integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daPiraT3-ISC/homebridge-v2-creskit.git" 
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "author": "Alan da Silva",
+  "license": "ISC",
+  "engines": {
+    "homebridge": "^1.6.0 || ^2.0.0-beta.0",
+    "node": "^18.20.4 || ^20.15.1 || ^22"
+  },
+  "bugs": {
+    "url": "https://github.com/daPiraT3-ISC/homebridge-v2-creskit/issues"
+  },
+  "homepage": "https://github.com/daPiraT3-ISC/homebridge-v2-creskit#readme",
+  "dependencies": {
+    "request": "^2.65.0",
+    "async": "^2.0.1"
+  }
+}
