@@ -1,5 +1,3 @@
-ro// Note remove comments or json file does not load.
-
 {
     "bridge": {
         "name": "CresKit",
@@ -12,12 +10,8 @@ ro// Note remove comments or json file does not load.
     {
       "platform": "CresKit",
       "name": "CresKit",
-      "host": "192.168.1.1", // IP Address of Crestron System
-      "port": "50001", // Match Port specified in Modue
-
-      // ID matches with the Crestron Signal Symbol
-      // accessories types
-      // Lightbulb, Switch, GarageDoorOpener, SecuritySystem
+      "host": "192.168.1.1",
+      "port": "50001",
 
       "accessories":[
         {
